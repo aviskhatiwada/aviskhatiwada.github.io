@@ -1,0 +1,15 @@
+Gtk-Message: 20:46:46.284: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+
+(chrome:6103): Gtk-WARNING **: 20:46:46.640: GTK+ module /snap/chromium/2873/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.
+GTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.
+Gtk-Message: 20:46:46.640: Failed to load module "canberra-gtk-module"
+
+(chrome:6103): Gtk-WARNING **: 20:46:46.642: GTK+ module /snap/chromium/2873/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.
+GTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.
+Gtk-Message: 20:46:46.642: Failed to load module "canberra-gtk-module"
+[6103:6103:0613/204647.196773:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.ScreenSaver.GetActive: object_path= /org/freedesktop/ScreenSaver: org.freedesktop.DBus.Error.NotSupported: This method is not implemented
+Fontconfig error: Cannot load default config file
+[6243:6243:0613/204702.356243:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 1 times!
+[6243:6243:0613/204702.361392:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 2 times!
+[6243:6243:0613/204709.352990:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 3 times!
+[6103:6103:0613/205237.334340:ERROR:atom_cache.cc(229)] Add chromium/from-privileged to kAtomsToCache
