@@ -1,2 +1,7 @@
 Gtk-Message: 19:23:18.238: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
 [6021:6021:0623/192319.196901:ERROR:object_proxy.cc(576)] Failed to call method: org.xfce.ScreenSaver.GetActive: object_path= /org/xfce/ScreenSaver: org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.145" (uid=1000 pid=6021 comm="/snap/chromium/2883/usr/lib/chromium-browser/chrom" label="snap.chromium.chromium (enforce)") interface="org.xfce.ScreenSaver" member="GetActive" error name="(unset)" requested_reply="0" destination="org.xfce.ScreenSaver" (uid=1000 pid=1787 comm="/usr/bin/xfce4-screensaver " label="unconfined")
+Fontconfig error: Cannot load default config file
+[6142:6142:0623/204421.460226:ERROR:shared_image_manager.cc(223)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[6142:6142:0623/204421.461760:ERROR:shared_image_manager.cc(223)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Fontconfig error: Cannot load default config file
+Warning: disabling flag --expose_wasm due to conflicting flags
