@@ -5,3 +5,25 @@ Fontconfig error: Cannot load default config file
 [6142:6142:0623/204421.461760:ERROR:shared_image_manager.cc(223)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
 Fontconfig error: Cannot load default config file
 Warning: disabling flag --expose_wasm due to conflicting flags
+[6021:6021:0623/211443.830231:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.831600:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.857445:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.859582:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.875815:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.886246:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.927671:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.934197:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6021:6021:0623/211443.979730:ERROR:service_worker_task_queue.cc(244)] DidStartWorkerFail gighmmpiobklfepjocnamgkkbiglidom: 3
+[6021:6021:0623/211443.988910:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211443.994668:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211443.997795:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.000453:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.003181:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.005876:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.008663:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.011440:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.014153:ERROR:gpu_process_host.cc(996)] GPU process launch failed: error_code=1002
+[6021:6021:0623/211444.014215:FATAL:gpu_data_manager_impl_private.cc(449)] GPU process isn't usable. Goodbye.
+[0623/211444.028993:ERROR:ptracer.cc(605)] ptrace: Input/output error (5)
+[0623/211444.296226:ERROR:elf_dynamic_array_reader.h(64)] tag not found
+[0623/211444.329834:ERROR:elf_dynamic_array_reader.h(64)] tag not found
