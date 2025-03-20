@@ -1,31 +1,17 @@
-<html>
-<body style="margin-left: 15%; margin-right: 15%; margin-top: 1%;">
-    <style>
-        pre {
-            background-color: #f4f4f4;
-            overflow-x: auto;
-            padding: 10px;
-        }
-        code {
-            color: #333;
-            
-        }
-    </style>
+<html> <body> <style> pre { white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word; } code {overflow-x: auto;  background-color: #f4f4f4; display: block; width: 100%; padding:2; } body, html { margin: 0; padding: 0; } </style>
 
+<div style="margin-left: 7%; margin-right: 7%; margin-top: 1%;">
 <a style="color: black;" href="index.html">index</a>
-<pre>
-<code>def helper_realized_ast(r:Union[Tensor, list[Tensor]]) -> tuple[UOp, list[Buffer]]:
-  if isinstance(r, Tensor): r = [r]
-  s = Tensor.schedule(*r)
-  run_schedule(s[:-1])  # run all kernels except the last one
-  assert s[-1].ast.op is Ops.SINK, f"helper_realized_ast expects a SINK {s[-1]}"
-  # now all input buffers in s[-1] should be realized
-  # create fresh buffers for the outputs
-  bufs = [Buffer((x).device, x.size, x.dtype).allocate() if i < len(s[-1].ast.src) else x for i,x in enumerate(s[-1].bufs)]
-  return s[-1].ast, bufs
-</code></pre>
+<pre><code>(UPat.var().where(UPat.var("val"), UPat.var("val")), lambda val: val),
+  (UPat.cvar("gate", vec=False).where(UPat.var("c0"), UPat.var("c1")), lambda gate, c0, c1: c0 if gate.arg else c1),
+  # alu of two where with same conds can combine, only do if true branch or false branch is const
+  (UPat(GroupOp.Binary, name="alu", src=(UPat.var("c").where(UPat.var("t"), UPat.var("f")), UPat.var("c").where(UPat.var("tt"), UPat.var("ff")))), \
+   lambda alu,c,t,tt,f,ff: c.where(t.alu(alu.op, tt), f.alu(alu.op, ff)) if t.op == tt.op == Ops.CONST or f.op == ff.op == Ops.CONST else None), </code>
+This pattern matches for conditions- the first is when we have the same return value for either case of val (lambda val: val); the second matches switch/gated conditionals, simply return c0 if gate.arg, otherwise c1; the last combines two seperate conditionals which have the same predicate, when the outputs of which are being fused by a BinaryOp; we can simply do the operation on either output, given that they are constants. Thus, (c ? t : f) + (c ? tt : ff) -> (c ? t+tt : f+ff).
+--
 
-
+</pre>
+</div>
 </body>
 </html>
 
